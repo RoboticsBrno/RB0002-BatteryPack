@@ -1,15 +1,19 @@
 # RB0002-BatteryPack
 
-Universal Li-Ion battery pack for robots.
+Universal 2 cells Li-Ion battery pack with separate USB charger PCB for robot power supplying.
 
-# Repository Structure
+This battery pack is designed for continuous 8.4 V / 15 A.
+
+View this project on [CADLAB.io](https://cadlab.io/project/22740/).
+
+## Repository Structure
 
 - `batteryPack` contains the main schematics and board drawing
 - `footprints` contains the board-specific footprints
 - `symbols` contains the board-specific symbols
 - `tools` contains few scripts for automatization
 
-# Building
+## Building
 
 Simply call `make` in the top-top level directory. The `build` directory will
 them contain:
