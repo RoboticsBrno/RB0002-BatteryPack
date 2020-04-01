@@ -894,7 +894,7 @@ L Connector_Generic:Conn_01x03 J6
 U 1 1 5EA258DB
 P 3250 5750
 F 0 "J6" H 3330 5792 50  0000 L CNN
-F 1 "Conn_01x03" H 3330 5701 50  0000 L CNN
+F 1 "CableConnector" H 3330 5701 50  0000 L CNN
 F 2 "batteryPack:cableConnector" H 3250 5750 50  0001 C CNN
 F 3 "~" H 3250 5750 50  0001 C CNN
 	1    3250 5750
@@ -922,4 +922,10 @@ F 3 "~" H 4650 2700 50  0001 C CNN
 	1    4650 2700
 	0    -1   -1   0   
 $EndComp
+Text Label 2850 5400 0    50   ~ 0
+OUT+
+Text Label 2850 6100 0    50   ~ 0
+OUT-
+Text Label 2850 5750 0    50   ~ 0
+MID
 $EndSCHEMATC
