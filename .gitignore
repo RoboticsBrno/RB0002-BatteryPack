@@ -31,3 +31,6 @@ fp-info-cache
 
 # Build outputs
 build
+
+# MS Excel lock files
+.~lock.*

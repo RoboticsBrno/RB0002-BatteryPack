@@ -9,6 +9,7 @@ View this project on [CADLAB.io](https://cadlab.io/project/22740/).
 ## Repository Structure
 
 - `batteryPack` contains the main schematics and board drawing
+- `doc` contains CubeMX pinout of the MCU, resistor calculation spreadsheet, etc.
 - `footprints` contains the board-specific footprints
 - `symbols` contains the board-specific symbols
 - `tools` contains few scripts for automatization
