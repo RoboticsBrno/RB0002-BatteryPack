@@ -292,9 +292,9 @@ F 3 "" H 1450 3100 50  0001 C CNN
 	1    1450 3100
 	0    1    1    0   
 $EndComp
-Text GLabel 1850 1450 2    50   Input ~ 0
+Text GLabel 2000 1450 2    50   Input ~ 0
 D-
-Text GLabel 1850 1650 2    50   Input ~ 0
+Text GLabel 2000 1650 2    50   Input ~ 0
 D+
 Text GLabel 1450 3400 2    50   Input ~ 0
 D-
@@ -376,9 +376,9 @@ Text GLabel 5950 2350 0    50   Input ~ 0
 SWCLK
 Text GLabel 5950 2250 0    50   Input ~ 0
 SWDIO
-Text GLabel 7950 1400 0    50   Input ~ 0
-SWDIO
 Text GLabel 7950 1500 0    50   Input ~ 0
+SWDIO
+Text GLabel 7950 1400 0    50   Input ~ 0
 SWCLK
 $Comp
 L power:+3V3 #PWR0114
@@ -918,4 +918,8 @@ Text Label 9600 5200 0    50   ~ 0
 BP_B1-
 Text Label 8550 5200 0    50   ~ 0
 BP_B1+
+Wire Wire Line
+	2000 1450 1850 1450
+Wire Wire Line
+	2000 1650 1850 1650
 $EndSCHEMATC
