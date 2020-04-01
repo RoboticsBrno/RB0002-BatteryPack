@@ -41,12 +41,12 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 J10
 U 1 1 5E83A998
-P 8600 5200
-F 0 "J10" H 8518 4975 50  0000 C CNN
-F 1 "B1+" H 8518 5066 50  0000 C CNN
-F 2 "batteryPack:2mm_Banana-Socket" H 8600 5200 50  0001 C CNN
-F 3 "~" H 8600 5200 50  0001 C CNN
-	1    8600 5200
+P 8200 5200
+F 0 "J10" H 8118 4975 50  0000 C CNN
+F 1 "B1+" H 8118 5066 50  0000 C CNN
+F 2 "batteryPack:2mm_Banana-Socket" H 8200 5200 50  0001 C CNN
+F 3 "~" H 8200 5200 50  0001 C CNN
+	1    8200 5200
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -63,27 +63,27 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 J11
 U 1 1 5E83B363
-P 9650 5200
-F 0 "J11" H 9730 5242 50  0000 L CNN
-F 1 "B1-" H 9730 5151 50  0000 L CNN
-F 2 "batteryPack:2mm_Banana-Socket" H 9650 5200 50  0001 C CNN
-F 3 "~" H 9650 5200 50  0001 C CNN
-	1    9650 5200
+P 10400 5200
+F 0 "J11" H 10480 5242 50  0000 L CNN
+F 1 "B1-" H 10480 5151 50  0000 L CNN
+F 2 "batteryPack:2mm_Banana-Socket" H 10400 5200 50  0001 C CNN
+F 3 "~" H 10400 5200 50  0001 C CNN
+	1    10400 5200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 J12
 U 1 1 5E83B842
-P 9650 5500
-F 0 "J12" H 9730 5542 50  0000 L CNN
-F 1 "B2-" H 9730 5451 50  0000 L CNN
-F 2 "batteryPack:2mm_Banana-Socket" H 9650 5500 50  0001 C CNN
-F 3 "~" H 9650 5500 50  0001 C CNN
-	1    9650 5500
+P 10200 5500
+F 0 "J12" H 10280 5542 50  0000 L CNN
+F 1 "B2-" H 10280 5451 50  0000 L CNN
+F 2 "batteryPack:2mm_Banana-Socket" H 10200 5500 50  0001 C CNN
+F 3 "~" H 10200 5500 50  0001 C CNN
+	1    10200 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 5200 8800 5200
+	8850 5200 8400 5200
 Wire Wire Line
 	8850 5500 8550 5500
 $Comp
@@ -861,28 +861,6 @@ F 3 "~" H 4800 5800 50  0001 C CNN
 	1    4800 5800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5EA16A2A
-P 4800 6050
-F 0 "H3" H 4900 6096 50  0000 L CNN
-F 1 "MountingHole" H 4900 6005 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4800 6050 50  0001 C CNN
-F 3 "~" H 4800 6050 50  0001 C CNN
-	1    4800 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5EA17F6A
-P 4800 6300
-F 0 "H4" H 4900 6346 50  0000 L CNN
-F 1 "MountingHole" H 4900 6255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4800 6300 50  0001 C CNN
-F 3 "~" H 4800 6300 50  0001 C CNN
-	1    4800 6300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1850 5750 2050 5750
 Wire Wire Line
@@ -928,4 +906,16 @@ Text Label 2850 6100 0    50   ~ 0
 OUT-
 Text Label 2850 5750 0    50   ~ 0
 MID
+Wire Wire Line
+	10200 5200 9450 5200
+Wire Wire Line
+	10000 5500 9450 5500
+Text Label 8550 5500 0    50   ~ 0
+BP_B2+
+Text Label 9600 5500 0    50   ~ 0
+BP_B2-
+Text Label 9600 5200 0    50   ~ 0
+BP_B1-
+Text Label 8550 5200 0    50   ~ 0
+BP_B1+
 $EndSCHEMATC
