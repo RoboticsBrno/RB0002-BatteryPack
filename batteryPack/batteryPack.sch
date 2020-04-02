@@ -97,18 +97,14 @@ F 3 "" H 9750 2250 50  0001 C CNN
 	1    9650 2250
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9200 1300
 NoConn ~ 9200 1400
-NoConn ~ 9200 1500
-NoConn ~ 9200 2150
 NoConn ~ 9200 2250
-NoConn ~ 9200 2350
 $Comp
-L Connector:USB_C_Plug_USB2.0 P1
+L Connector:USB_C_Receptacle_USB2.0 P1
 U 1 1 5E8413A8
 P 1250 1550
 F 0 "P1" H 1357 2417 50  0000 C CNN
-F 1 "USB_C_Plug_USB2.0" H 1357 2326 50  0000 C CNN
+F 1 "USB-C" H 1357 2326 50  0000 C CNN
 F 2 "batteryPack:USB_C_Female-16Pin-HPJF" H 1400 1550 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1400 1550 50  0001 C CNN
 	1    1250 1550
@@ -242,7 +238,7 @@ L Connector:USB_B_Micro J1
 U 1 1 5E87821F
 P 1150 3300
 F 0 "J1" H 1207 3767 50  0000 C CNN
-F 1 "USB_B_Micro" H 1207 3676 50  0000 C CNN
+F 1 "Mirco USB" H 1207 3676 50  0000 C CNN
 F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521_CircularHoles" H 1300 3250 50  0001 C CNN
 F 3 "~" H 1300 3250 50  0001 C CNN
 	1    1150 3300
@@ -510,10 +506,6 @@ D+_CTL
 Text GLabel 5950 1750 0    50   Input ~ 0
 D-_CTL
 NoConn ~ 5950 1350
-NoConn ~ 5950 2150
-NoConn ~ 6950 2350
-NoConn ~ 6950 2150
-NoConn ~ 6950 2050
 $Comp
 L Device:LED D1
 U 1 1 5E920A6D
@@ -922,4 +914,28 @@ Wire Wire Line
 	2000 1450 1850 1450
 Wire Wire Line
 	2000 1650 1850 1650
+NoConn ~ 1850 2050
+NoConn ~ 1850 2150
+Wire Wire Line
+	1850 1550 1850 1450
+Connection ~ 1850 1450
+Wire Wire Line
+	1850 1750 1850 1650
+Connection ~ 1850 1650
+Text GLabel 6950 2050 2    50   Input ~ 0
+B1_CH
+Text GLabel 9200 1500 0    50   Input ~ 0
+B1_F
+Text GLabel 9200 2150 0    50   Input ~ 0
+B2_CH
+Text GLabel 9200 2350 0    50   Input ~ 0
+B2_F
+Text GLabel 9200 1300 0    50   Input ~ 0
+B1_CH
+Text GLabel 6950 2150 2    50   Input ~ 0
+B1_F
+Text GLabel 5950 2150 0    50   Input ~ 0
+B2_CH
+Text GLabel 6950 2350 2    50   Input ~ 0
+B2_F
 $EndSCHEMATC
