@@ -21,3 +21,6 @@ them contain:
 
 - split boards for the charger and the battery pack
 - zipped gerbers for the boards you can directly use for manufacturing
+
+Makefile uses [KiKit](https://github.com/yaqwsx/KiKit), therefore it has to be
+available on your system.
