@@ -4,7 +4,7 @@ BOARDS = charger battery connector battery-panel charger-panel connector-panel
 BOARDSFILES = $(addprefix build/, $(BOARDS:=.kicad_pcb))
 GERBERS = $(addprefix build/, $(BOARDS:=-gerber.zip))
 
-RADIUS=0
+RADIUS=1
 
 all: $(GERBERS) build/web/index.html
 
