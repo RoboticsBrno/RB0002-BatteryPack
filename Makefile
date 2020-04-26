@@ -9,7 +9,7 @@ RADIUS=1
 all: $(GERBERS) build/web/index.html
 
 build/charger.kicad_pcb: batteryPack/batteryPack.kicad_pcb build
-	kikit panelize extractboard -s 175 50 60 40 $< $@
+	kikit panelize extractboard -s 175 50 70 40 $< $@
 
 build/battery.kicad_pcb: batteryPack/batteryPack.kicad_pcb build
 	kikit panelize extractboard -s 20 20 70 90 $< $@
