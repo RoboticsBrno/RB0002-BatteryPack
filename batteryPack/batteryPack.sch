@@ -859,17 +859,6 @@ Wire Wire Line
 	2050 5750 2050 6450
 Wire Wire Line
 	2050 6450 1850 6450
-$Comp
-L Connector_Generic:Conn_01x03 J6
-U 1 1 5EA258DB
-P 3250 5750
-F 0 "J6" H 3330 5792 50  0000 L CNN
-F 1 "CableConnector" H 3330 5701 50  0000 L CNN
-F 2 "batteryPack:cableConnector" H 3250 5750 50  0001 C CNN
-F 3 "~" H 3250 5750 50  0001 C CNN
-	1    3250 5750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3050 5750 2050 5750
 Connection ~ 2050 5750
@@ -938,4 +927,15 @@ Text GLabel 5950 2150 0    50   Input ~ 0
 B2_CH
 Text GLabel 6950 2350 2    50   Input ~ 0
 B2_F
+$Comp
+L Connector_Generic:Conn_01x03 J6
+U 1 1 5EA258DB
+P 3250 5750
+F 0 "J6" H 3330 5792 50  0000 L CNN
+F 1 "CableConnector" H 3330 5701 50  0000 L CNN
+F 2 "batteryPack:Terminal_1x03_P5.08mm_Horizontal" H 3250 5750 50  0001 C CNN
+F 3 "~" H 3250 5750 50  0001 C CNN
+	1    3250 5750
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
