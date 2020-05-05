@@ -12,14 +12,13 @@ build/charger.kicad_pcb: batteryPack/batteryPack.kicad_pcb build
 	kikit panelize extractboard -s 175 50 70 40 $< $@
 
 build/battery.kicad_pcb: batteryPack/batteryPack.kicad_pcb build
-	kikit panelize extractboard -s 20 20 70 90 $< $@
+	kikit panelize extractboard -s 20 20 70 98 $< $@
 
 build/connector.kicad_pcb: batteryPack/batteryPack.kicad_pcb build
 	kikit panelize extractboard -s 116 52 30 36 $< $@
 
 build/battery-panel.kicad_pcb: build/battery.kicad_pcb
-	kikit panelize grid --space 3 --gridsize 1 2 --tabwidth 30 --tabheight 60 \
-		--vcuts --radius $(RADIUS) $< $@
+	python3 scripts/panelizeBattery.py $< $@
 
 build/connector-panel.kicad_pcb: build/connector.kicad_pcb
 	kikit panelize grid --space 3 --gridsize 2 4 --tabwidth 10 --tabheight 24 \
