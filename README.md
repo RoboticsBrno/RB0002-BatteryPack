@@ -7,6 +7,8 @@ This battery pack is designed for continuous 8.4 V / 15 A.
 
 View this project on [CADLAB.io](https://cadlab.io/project/22740/).
 
+License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?)
+
 ## Repository Structure
 
 - `batteryPack` contains the main schematics and board drawing
