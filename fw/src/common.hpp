@@ -4,7 +4,7 @@
 #include "dbg.hpp"
 #include "sys.hpp"
 
-#define HAL_CHECK(EXPR)                                               \
+/* #define HAL_CHECK(EXPR)                                               \
     do {                                                              \
         auto ret = EXPR;                                              \
         if ( ret != HAL_OK ) {                                        \
@@ -12,13 +12,15 @@
             Dbg::print("Error: %x", HAL_ADC_GetError(& _adc ) );      \
             abort();                                                  \
         }                                                             \
-    } while( false );
+    } while( false ); */
+
+#define HAL_CHECK(EXPR) EXPR
 
 template < typename T >
 struct Approx {
     T val, eps;
 };
-template < typename T > Approx(T, T) -> Approx< T >;
+template < typename T > Approx(T, T) -> Approx< T>;
 
 template < typename T >
 bool operator==( const T& val, Approx< T > a ) {

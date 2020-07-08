@@ -3,8 +3,8 @@
 #include "adc.hpp"
 
 void ErrorHandler() {
-    Dbg::print( "A fatal error occured" );
-    while( true );
+    // Dbg::print( "A fatal error occured" );
+    // while( true );
 }
 
 void SystemClock_Config(void) {
@@ -61,13 +61,13 @@ int main() {
 
     while ( true ) {
         auto tick = HAL_GetTick();
-
-        if ( tick % MODE_PERIOD < MODE_PERIOD / 2 ) {
+        float busVoltage = analogPhy.busVoltage();
+        if ( tick % MODE_PERIOD < MODE_PERIOD / 2 || busVoltage < 3 ) {
             percentAnim.set( batteryPercent( analogPhy.batt1Voltage() ) );
             percentAnim( tick );
         }
         else {
-            voltageAnim.set( analogPhy.busVoltage() );
+            voltageAnim.set( busVoltage );
             voltageAnim( tick );
         }
     }

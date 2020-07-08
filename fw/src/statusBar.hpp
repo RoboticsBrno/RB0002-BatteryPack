@@ -46,7 +46,7 @@ public:
         _blinkPeriod( blinkPeriod )
     {}
 
-    virtual void operator()( uint32_t tick ) = 0;
+    // virtual void operator()( uint32_t tick ) = 0;
 protected:
     void _blink( int idx, uint32_t tick ) {
         if ( idx >= _bar->size() )
@@ -73,7 +73,7 @@ public:
         _percent = percent;
     }
 
-    void operator()( uint32_t tick ) override {
+    void operator()( uint32_t tick ) {
         _bar->clear();
         int percent = _percent > 90 ? 100 : _percent;
         int fillLevel = percent * 6 / 100;
@@ -112,7 +112,7 @@ public:
         _voltage = voltage;
     }
 
-    void operator()( uint32_t tick ) override {
+    void operator()( uint32_t tick ) {
         _bar->clear();
         if ( _voltage == Approx{ 12.0f, 2.0f } ) {
             _bar->set( 5, true );
