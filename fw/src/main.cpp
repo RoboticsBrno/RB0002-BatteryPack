@@ -1,6 +1,7 @@
 #include <stm32f0xx_hal.h>
 #include "statusBar.hpp"
 #include "adc.hpp"
+#include "qc.hpp"
 
 void ErrorHandler() {
     // Dbg::print( "A fatal error occured" );
@@ -53,6 +54,7 @@ int main() {
 
     StatusBar bar;
     AnalogPhy analogPhy;
+    Qc2Control qcControl( { GPIOA, GPIO_PIN_4 }, { GPIOA, GPIO_PIN_5 } );
 
     Percents percentAnim( bar, 0 );
     BusVoltage voltageAnim( bar, 0 );
@@ -62,6 +64,7 @@ int main() {
     while ( true ) {
         auto tick = HAL_GetTick();
         float busVoltage = analogPhy.busVoltage();
+        qcControl.run( busVoltage, tick );
         if ( tick % MODE_PERIOD < MODE_PERIOD / 2 || busVoltage < 3 ) {
             percentAnim.set( batteryPercent( analogPhy.batt1Voltage() ) );
             percentAnim( tick );
