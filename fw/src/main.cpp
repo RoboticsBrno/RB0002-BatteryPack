@@ -65,6 +65,13 @@ int main() {
 
     while ( true ) {
         auto tick = HAL_GetTick();
+        for ( int i = 0; i != bar.size(); i++ ) {
+            bar.set( i, tick % 600 < 300 );
+        }
+    }
+
+    while ( true ) {
+        auto tick = HAL_GetTick();
         float busVoltage = analogPhy.busVoltage();
         busSlidingAvg.push( busVoltage );
         busVoltage = busSlidingAvg.avg();
