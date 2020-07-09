@@ -4,8 +4,8 @@
 #include "qc.hpp"
 
 void ErrorHandler() {
-    // Dbg::print( "A fatal error occured" );
-    // while( true );
+    Dbg::print( "A fatal error occured" );
+    while( true );
 }
 
 void SystemClock_Config(void) {
@@ -59,11 +59,15 @@ int main() {
     Percents percentAnim( bar, 0 );
     BusVoltage voltageAnim( bar, 0 );
 
+    SlidingAverage< float, 4 > busSlidingAvg;
+
     const int MODE_PERIOD = 5000;
 
     while ( true ) {
         auto tick = HAL_GetTick();
         float busVoltage = analogPhy.busVoltage();
+        busSlidingAvg.push( busVoltage );
+        busVoltage = busSlidingAvg.avg();
         qcControl.run( busVoltage, tick );
         if ( tick % MODE_PERIOD < MODE_PERIOD / 2 || busVoltage < 3 ) {
             percentAnim.set( batteryPercent( analogPhy.batt1Voltage() ) );

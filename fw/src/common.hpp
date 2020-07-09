@@ -31,3 +31,27 @@ template < typename T >
 bool operator==( Approx< T > a, const T& val ) {
     return val >= a.val - a.eps && val <= a.val + a.eps;
 }
+
+template < typename T, int N >
+class SlidingAverage {
+public:
+    SlidingAverage() {
+        std::fill( _data.begin(), _data.end(), 0 );
+    }
+
+    void push( T sample ) {
+        for ( unsigned int i = 1; i < _data.size(); i++ )
+            _data[ i - 1 ] = _data[ i ];
+        _data.back() = sample;
+    }
+
+    T avg() const {
+        T sum = 0;
+        for ( unsigned int i = 0; i != _data.size(); i++ )
+            sum += _data[ i ];
+        return sum / _data.size();
+    }
+
+private:
+    std::array< T, N > _data;
+};
