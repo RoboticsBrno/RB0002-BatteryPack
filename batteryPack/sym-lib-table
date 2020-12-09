@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name batteryPack)(type Legacy)(uri ${KIPRJMOD}/../symbols/symbols.lib)(options "")(descr ""))
+  (lib (name batteryPack-rescue)(type Legacy)(uri ${KIPRJMOD}/batteryPack-rescue.lib)(options "")(descr ""))
 )
