@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Battery Pack</title>
+</head>
+
+<body>
+    <div class="container mx-auto px-3">
+        <div class="w-full my-3 text-sm text-right bg-gray-200 px-3 py-1">
+            Last update: 09. 12. 2020 21:28
+                (git revision
+                    <a href="https://github.com/RoboticsBrno/RB0002-BatteryPack/tree/4c7ee568bc9f27681b5d10c63ee30a3b78d399ad
+">
+                    4c7ee56
+                    </a>)
+        </div>
+
+        <h1>RB0002-BatteryPack</h1>
+
+<p>Universal 2 cells Li-Ion battery pack with separate USB charger PCB for robot
+power supplying.</p>
+
+<p>This battery pack is designed for continuous 8.4 V / 15 A.</p>
+
+<p>View this project on <a href="https://cadlab.io/project/22740/">CADLAB.io</a>.</p>
+
+<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/?">CC BY-SA 4.0</a></p>
+
+<h2>Repository Structure</h2>
+
+<ul>
+<li><code>batteryPack</code> contains the main schematics and board drawing</li>
+<li><code>doc</code> contains CubeMX pinout of the MCU, resistor calculation spreadsheet,
+etc.</li>
+<li><code>footprints</code> contains the board-specific footprints</li>
+<li><code>symbols</code> contains the board-specific symbols</li>
+<li><code>tools</code> contains few scripts for automatization</li>
+</ul>
+
+<h2>Building</h2>
+
+<p>Simply call <code>make</code> in the top-top level directory. The <code>build</code> directory will
+them contain:</p>
+
+<ul>
+<li>split boards for the charger and the battery pack</li>
+<li>zipped gerbers for the boards you can directly use for manufacturing</li>
+</ul>
+
+<p>Makefile uses <a href="https://github.com/yaqwsx/KiKit">KiKit</a>, therefore, it has to be
+available on your system.</p>
+
+
+        <h1>Available files</h1>
+
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/charger-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/charger-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Charger Board</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/charger.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/charger-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/battery-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/battery-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Battery Board</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/battery.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/battery-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/connector-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/connector-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Connector Board</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/connector.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/connector-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/charger-panel-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/charger-panel-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Charger Board Panelized</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/charger-panel.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/charger-panel-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/battery-panel-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/battery-panel-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Battery Board Panelized</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/battery-panel.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/battery-panel-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap bg-gray-200 py-3 px-3 my-2 rounded">
+                <div class="w-full md:w-1/3">
+                    <h3>Front</h3>
+                    <img src="boards/connector-panel-front.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3>Back</h3>
+                    <img src="boards/connector-panel-back.png" class="boardPreview">
+                </div>
+                <div class="w-full md:w-1/3 px-4">
+                    <h3>Connector Board Panelized</h3>
+                    <p> </p>
+                    <p>
+                        <ul>
+                            <li><a href="boards/connector-panel.kicad_pcb">Download source board</a></li>
+                            <li><a href="boards/connector-panel-gerbers.zip">Download gerbers</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        <div class="w-full mt-16 mb-1 p-2 bg-gray-200 text-center txt-xs rounded">
+            Generated by <a href="https://github.com/yaqwsx/KiKit">KiKit</a>
+        </div>
+    </div>
+</body>
+
+</html>
